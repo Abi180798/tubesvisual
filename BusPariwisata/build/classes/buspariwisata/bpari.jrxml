@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="ab62cfab-5432-4785-a145-d70a6e0149cd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pesan.`id_pesan` AS pesan_id_pesan,
+     pesan.`nama` AS pesan_nama,
+     pesan.`alamat` AS pesan_alamat,
+     pesan.`nohp` AS pesan_nohp,
+     pesan.`tipebus` AS pesan_tipebus,
+     pesan.`jumlahbus` AS pesan_jumlahbus,
+     pesan.`harga` AS pesan_harga,
+     pesan.`tujuan` AS pesan_tujuan,
+     pesan.`tglberangkat` AS pesan_tglberangkat
+FROM
+     `pesan` pesan]]>
+	</queryString>
+	<field name="pesan_id_pesan" class="java.lang.Integer"/>
+	<field name="pesan_nama" class="java.lang.String"/>
+	<field name="pesan_alamat" class="java.lang.String"/>
+	<field name="pesan_nohp" class="java.lang.String"/>
+	<field name="pesan_tipebus" class="java.lang.String"/>
+	<field name="pesan_jumlahbus" class="java.lang.String"/>
+	<field name="pesan_harga" class="java.lang.Integer"/>
+	<field name="pesan_tujuan" class="java.lang.String"/>
+	<field name="pesan_tglberangkat" class="java.lang.String"/>
+	<group name="pesan_id_pesan">
+		<groupExpression><![CDATA[$F{pesan_id_pesan}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="54" y="0" width="730" height="24" forecolor="#000000" uuid="bd0454d8-fff0-4e08-8830-5f30506b7e39"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pesan_id_pesan}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="8" y="0" width="35" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="f9bbec1c-d111-4e9e-9b18-57027f725ed2"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="30"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="42e05b57-061d-4744-9107-782e6d3650b0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Jadwal Pemesanan Bus]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="89" width="800" height="15" backcolor="#666666" uuid="9069e4aa-4de0-4b31-8aea-db1171420ff7"/>
+				<staticText>
+					<reportElement style="Column header" x="5" y="0" width="136" height="15" uuid="2f2e8e37-cc0b-4d37-a7bf-2c1453add2dd"/>
+					<text><![CDATA[Nama]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="141" y="0" width="88" height="15" uuid="676a6e3b-6b78-4766-8d9a-b72880cac8b4"/>
+					<text><![CDATA[Alamat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="229" y="0" width="88" height="15" uuid="d287d2ac-ee59-422d-93db-710859ba8b69"/>
+					<text><![CDATA[Telepon]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="319" y="0" width="88" height="15" uuid="f9878657-c035-4cb8-89ca-a1b9fe1b198f"/>
+					<text><![CDATA[Tipe Bus]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="405" y="0" width="88" height="15" uuid="c7a429c0-403f-4b3a-851e-afc4d4267468"/>
+					<text><![CDATA[Jumlah Bus]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="493" y="0" width="88" height="15" uuid="00c6882b-db6d-4607-8f01-8354aef6903d"/>
+					<text><![CDATA[Harga]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="581" y="0" width="87" height="15" uuid="18bf1ccc-62a7-46e4-ab7b-3a028f87c99b"/>
+					<text><![CDATA[Tujuan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="668" y="0" width="116" height="15" uuid="47b148c7-2e7a-4a79-8242-f60d0eafb1b6"/>
+					<text><![CDATA[Tanggal Berangkat]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="54" y="2" width="705" height="15" uuid="ee58fa3a-3574-42d7-a628-d967b8df8b40"/>
+				<textField>
+					<reportElement style="Detail" x="88" y="0" width="88" height="15" uuid="9fb5673a-2a3b-4e84-a961-5097f08e7846"/>
+					<textFieldExpression><![CDATA[$F{pesan_alamat}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="176" y="0" width="88" height="15" uuid="bb2b72fd-751b-4415-a6bc-14eccf840650"/>
+					<textFieldExpression><![CDATA[$F{pesan_nohp}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="264" y="0" width="88" height="15" uuid="cc118d5e-15e2-4c49-813a-2303eef4f496"/>
+					<textFieldExpression><![CDATA[$F{pesan_tipebus}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="352" y="0" width="88" height="15" uuid="b423c4cc-2276-4890-a730-3d3cdd3ceae5"/>
+					<textFieldExpression><![CDATA[$F{pesan_jumlahbus}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="440" y="0" width="88" height="15" uuid="c5441872-d195-497c-be59-8211e8e61871"/>
+					<textFieldExpression><![CDATA[$F{pesan_harga}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="528" y="0" width="88" height="15" uuid="559be8c8-6e33-4a58-9743-df53df2ca4b0"/>
+					<textFieldExpression><![CDATA[$F{pesan_tujuan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="616" y="0" width="88" height="15" uuid="50f6fbd7-49be-46a9-8839-ea4445cec98d"/>
+					<textFieldExpression><![CDATA[$F{pesan_tglberangkat}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="7cdc4a99-4753-4499-a277-e44c1fd40b14"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="2" y="1" width="88" height="15" uuid="15629f3e-6a45-44f3-b67a-ac34a0d7dacf"/>
+				<textFieldExpression><![CDATA[$F{pesan_nama}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="2460ad7a-941a-4269-bb7f-0e34e1192c00"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
